@@ -3,7 +3,7 @@ package Practice2;
 public class Student {
     private final String name;
     private final int id;
-    int studyYear;
+    private int studyYear;
 
     public Student(String name, int id) {
         this.name = name;
@@ -17,6 +17,9 @@ public class Student {
     public String getName() {
         return name;
     }
+    public int getStudyYear() {
+        return studyYear;
+    }
     public void increaseStudyYear() {
         studyYear++;
     }
@@ -27,6 +30,6 @@ public class Student {
         student.increaseStudyYear();
         System.out.println(student.getName());
         System.out.println(student.getId());
-        System.out.println(student.studyYear);
+        System.out.println(student.getStudyYear());
     }
 }
