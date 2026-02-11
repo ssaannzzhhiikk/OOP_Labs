@@ -1,6 +1,6 @@
 package Lab1.Problem2;
 
-public class Main {
+public class Students {
 
     enum Status {
         ACTIVE,
