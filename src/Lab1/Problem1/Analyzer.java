@@ -1,6 +1,5 @@
 package Lab1.Problem1;
 
-// beta version, has to be updated
 
 import java.util.Scanner;
 public class Analyzer {

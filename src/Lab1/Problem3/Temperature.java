@@ -5,15 +5,18 @@ public class Temperature {
     private char scale; // 'C' or 'F'
 
     public Temperature() {
-        this(0.0, 'C');
+        this.degrees= 0.0;
+        this.scale = 'C';
     }
 
     public Temperature(double degrees) {
-        this(degrees, 'C');
+        this.degrees = degrees;
+        this.scale = 'C';
     }
 
     public Temperature(char scale) {
-        this(0.0, scale);
+        this.degrees = 0.0;
+        this.scale = scale;
     }
 
     public Temperature(double degrees, char scale) {
