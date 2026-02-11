@@ -54,7 +54,7 @@ public class DragonLaunch {
         boolean willEat = dl.willDragonEatOrNot();
         System.out.print("After:  ");
         dl.printLine();
-        System.out.println("Will dragon eat? " + (willEat ? "Yes (some survivors -> dragon eats them)" : "No (no survivors)"));
+        System.out.println("Will dragon eat? " + (willEat ? "Yes " : "No"));
 
         DragonLaunch dl2 = new DragonLaunch();
         dl2.kidnap(new Person(Gender.GIRL));
