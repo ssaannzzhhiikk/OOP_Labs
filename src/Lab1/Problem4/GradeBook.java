@@ -29,7 +29,6 @@ public class GradeBook {
         outputBarChart();
     }
 
-    // returns average with two decimals
     public void determineClassAverage() {
         if (grades.isEmpty()) {
             System.out.println("No grades available");
