@@ -8,28 +8,29 @@ public class Person {
     private String address;
 
     public Person(String name, String address) {
+        if (name == null || name.isBlank())
+            throw new IllegalArgumentException("Name cannot be null or empty");
+        if (address == null || address.isBlank())
+            throw new IllegalArgumentException("Address cannot be null or empty");
+
         this.name = name;
         this.address = address;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
+    public String getName() { return name; }
+    public String getAddress() { return address; }
 
     public void setAddress(String address) {
+        if (address == null || address.isBlank())
+            throw new IllegalArgumentException("Address cannot be null or empty");
         this.address = address;
     }
 
     @Override
     public String toString() {
-        return "Person[name=" + name + ",address=" + address + "]";
+        return "Person[name=" + name + ", address=" + address + "]";
     }
 
-    // Important for HashSet
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,7 +41,6 @@ public class Person {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, address);
+        return Objects.hash(name); // only immutable field
     }
 }
-

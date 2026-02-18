@@ -15,12 +15,12 @@ public class Main {
             System.out.println("\n1. Add Person");
             System.out.println("2. Add Student");
             System.out.println("3. Add Staff");
-            System.out.println("4. Print All");
+            System.out.println("4. Print all");
             System.out.println("5. Exit");
             System.out.print("Choose option: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1 -> addPerson();
@@ -31,7 +31,7 @@ public class Main {
                     System.out.println("Exiting...");
                     return;
                 }
-                default -> System.out.println("Invalid option!");
+                default -> System.out.println("Invalid option, try again.");
             }
         }
     }
@@ -39,7 +39,6 @@ public class Main {
     private static void addPerson() {
         System.out.print("Name: ");
         String name = scanner.nextLine();
-
         System.out.print("Address: ");
         String address = scanner.nextLine();
 
@@ -50,16 +49,12 @@ public class Main {
     private static void addStudent() {
         System.out.print("Name: ");
         String name = scanner.nextLine();
-
         System.out.print("Address: ");
         String address = scanner.nextLine();
-
         System.out.print("Program: ");
         String program = scanner.nextLine();
-
         System.out.print("Year: ");
         int year = scanner.nextInt();
-
         System.out.print("Fee: ");
         double fee = scanner.nextDouble();
         scanner.nextLine();
@@ -71,13 +66,10 @@ public class Main {
     private static void addStaff() {
         System.out.print("Name: ");
         String name = scanner.nextLine();
-
         System.out.print("Address: ");
         String address = scanner.nextLine();
-
         System.out.print("School: ");
         String school = scanner.nextLine();
-
         System.out.print("Pay: ");
         double pay = scanner.nextDouble();
         scanner.nextLine();
@@ -91,11 +83,10 @@ public class Main {
             System.out.println("No users added yet.");
             return;
         }
-
         System.out.println("\n--- All Users ---");
         for (Person p : people) {
-            System.out.println(p);  // polymorphism works here
+            System.out.println(p);
         }
+        System.out.println("Total: " + people.size());
     }
 }
-
