@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Default elephant:");
         Elephant e1 = new Elephant();
         e1.makeSound();
-        e1.eat("grass", 50);
+        e1.eat("grass", 50.0);
         System.out.println(e1.getTrunkLength());
         System.out.println(e1);
 
@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Elephant with parameters:");
         Elephant e2 = new Elephant("Dumbo", 10, 2.5);
         e2.makeSound();
-        e2.eat("fruits", 30);
+        e2.eat("fruits", 30.0);
         System.out.println(e2);
 
         System.out.println();
@@ -24,8 +24,8 @@ public class Main {
         System.out.println("Polymorphism example:");
         Animal animal = new Elephant("Big One", 15, 3.0);
         animal.makeSound();
-        System.out.println();
         animal.eat("leaves", 40);
+        animal.eat("Leaf");
         System.out.println(animal);
     }
 }
