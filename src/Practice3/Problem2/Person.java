@@ -41,6 +41,6 @@ public class Person {
 
     @Override
     public int hashCode() {
-        return Objects.hash(name); // only immutable field
+        return Objects.hash(name);
     }
 }
