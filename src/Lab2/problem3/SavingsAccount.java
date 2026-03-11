@@ -16,6 +16,11 @@ public class SavingsAccount extends Account {
     public double getInterestRate() { return interestRate; }
 
     @Override
+    public void update() {
+        addInterest();
+    }
+
+    @Override
     public String toString() {
         return "Savings" + super.toString() + " | Interest Rate: " + interestRate + "%";
     }

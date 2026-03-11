@@ -21,11 +21,7 @@ public class Bank {
 
     public void update() {
         for (Account account : accounts) {
-            if (account instanceof SavingsAccount) {
-                ((SavingsAccount) account).addInterest();
-            } else if (account instanceof CheckingAccount) {
-                ((CheckingAccount) account).deductFee();
-            }
+            account.update();
         }
     }
 

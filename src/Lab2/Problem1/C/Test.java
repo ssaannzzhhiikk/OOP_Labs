@@ -12,7 +12,7 @@ public class Test {
         Vehicle v1 = new Vehicle("Ford", 2018);
 
         set.add(c1);
-        set.add(c2); // should not be added
+        set.add(c2);
         set.add(c3);
         set.add(v1);
 

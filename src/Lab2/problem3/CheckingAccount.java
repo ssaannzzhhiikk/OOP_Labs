@@ -12,14 +12,19 @@ public class CheckingAccount extends Account {
 
     @Override
     public void deposit(double sum) {
-        super.deposit(sum);
-        transactionCount++;
+        if (sum > 0) {
+            super.deposit(sum);
+            transactionCount++; // FIX (Bug 2): only count if deposit is valid
+        }
     }
 
     @Override
     public void withdraw(double sum) {
+        double balanceBefore = getBalance();
         super.withdraw(sum);
-        transactionCount++;
+        if (getBalance() < balanceBefore) {
+            transactionCount++; // FIX (Bug 2): only count if withdrawal actually succeeded
+        }
     }
 
     public void deductFee() {
@@ -29,9 +34,15 @@ public class CheckingAccount extends Account {
             super.withdraw(fee);
             System.out.println("Fee deducted: $" + String.format("%.2f", fee));
         }
+        transactionCount = 0; // FIX (Bug 1): reset counter after each billing cycle
     }
 
     public int getTransactionCount() { return transactionCount; }
+
+    @Override
+    public void update() {
+        deductFee();
+    }
 
     @Override
     public String toString() {
