@@ -10,7 +10,7 @@ public class TestChess {
         Piece king   = new King(new Position(4, 4), true);
 
         System.out.println("=== Rook at (0,0) ===");
-        System.out.println("-> (0,5): " + rook.isLegalMove(new Position(0, 5)));  // true
+        System.out.println("-> (0,5): " + rook.isLegalMove(new Position(1, 5)));  // true
         System.out.println("-> (3,5): " + rook.isLegalMove(new Position(3, 5)));  // false
 
         System.out.println("=== Bishop at (3,3) ===");
