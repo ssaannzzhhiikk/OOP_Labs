@@ -29,13 +29,12 @@ public class Main {
 
         System.out.println("\n=== Restaurant ===");
 
-        // Interface type reference — Restaurant doesn't care it's a Cat
         CanHavePizza eater = whiskers;
         delpapa.servePizza(eater);
 
         delpapa.servePizza(alice); // has money
         delpapa.servePizza(bob);   // barely has money
-        delpapa.servePizza(carol); // broke, gets rejected
+        delpapa.servePizza(carol); // broke
 
         System.out.println("\n=== Student other abilities ===");
         alice.move();
