@@ -11,7 +11,7 @@ public class Cat extends Animal implements CanHavePizza {
 
     @Override
     public void makeSound() {
-        System.out.println(getName() + " says: Meow! 🐱");
+        System.out.println(getName() + " says: Meow!");
     }
 
     @Override
