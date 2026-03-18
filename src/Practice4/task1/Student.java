@@ -1,4 +1,4 @@
-package Practice4;
+package Practice4.task1;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package Practice4;
+package Practice4.task1;
 
 public interface CanHavePizza {
     int PIZZA_SIZE = 8;
