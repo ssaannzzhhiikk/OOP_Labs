@@ -17,7 +17,7 @@ public class Cat extends Animal implements CanHavePizza {
     @Override
     public void eatPizza() {
         System.out.println(getName() + " the " + furColor + " cat sneaks a slice"
-                + " (size " + PIZZA_SIZE + ") and nibbles on it. Purrrr...");
+                + " (size " + PIZZA_SIZE + ") and nibbles on it");
     }
 
     public String getFurColor() { return furColor; }
