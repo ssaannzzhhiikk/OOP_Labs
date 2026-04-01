@@ -12,7 +12,7 @@ public interface MyCollection<E> {
 
     default boolean addAll(MyCollection<? extends E> other) {
         boolean changed = false;
-        for (Object o : other.toArray()) {
+        for (E[] o : (E[][]) other.toArray()) {
             @SuppressWarnings("unchecked") E e = (E) o;
             if (add(e)) changed = true;
         }
@@ -20,14 +20,14 @@ public interface MyCollection<E> {
     }
 
     default boolean containsAll(MyCollection<?> other) {
-        for (Object o : other.toArray())
+        for (E[] o : (E[][]) other.toArray())
             if (!contains(o)) return false;
         return true;
     }
 
     default boolean removeAll(MyCollection<?> other) {
         boolean changed = false;
-        for (Object o : other.toArray())
+        for (E[] o : (E[][]) other.toArray())
             if (remove(o)) changed = true;
         return changed;
     }
