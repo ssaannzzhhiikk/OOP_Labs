@@ -1,54 +1,43 @@
 package Practice5;
 
-import java.util.NoSuchElementException;
-import java.util.Scanner;
-import java.util.StringTokenizer;
+import java.util.*;
 
-
-public class Example4 {
-    public static void main(String[] args) {
-        double leftOperand, result, rightOperand;
-        String leftString, operator, rightString;
-        StringTokenizer tokenizer;
+public class Example4
+{
+    public static void main(String[] args)
+    {
+        double                 leftOperand, result, rightOperand;
+        String                 leftString, operator, rightString;
+        StringTokenizer        tokenizer;
         Scanner in = new Scanner(System.in);
 
-        tokenizer = new StringTokenizer(in.nextLine(), "+-*/", true);
+        tokenizer = new StringTokenizer(in.nextLine(), "+", true);
 
-        try {
-            leftString = tokenizer.nextToken();
-            operator = tokenizer.nextToken();
-            rightString = tokenizer.nextToken();
+        try
+        {
+            leftString   = tokenizer.nextToken();
+            operator     = tokenizer.nextToken();
+            rightString  = tokenizer.nextToken();
 
-            leftOperand = Double.parseDouble(leftString);
+            leftOperand  = Double.parseDouble(leftString);
             rightOperand = Double.parseDouble(rightString);
 
-            switch (operator) {
-                case "+":
-                    result = leftOperand + rightOperand;
-                    break;
-                case "-":
-                    result = leftOperand - rightOperand;
-                    break;
-                case "*":
-                    result = leftOperand * rightOperand;
-                    break;
-                case "/":
-                    if (rightOperand == 0.0) {
-                        System.out.println("Cannot divide by zero");
-                        return;
-                    }
-                    result = leftOperand / rightOperand;
-                    break;
-                default:
-                    System.out.println("Unknown operator: " + operator);
-                    return;
-            }
+            if (operator.equals("+"))
+                result = leftOperand + rightOperand;
+            else
+                result = 0.0;
 
             System.out.println("Result: " + result);
-        } catch (NoSuchElementException nsee) {
+        }
+        catch (NoSuchElementException nsee)
+        {
             System.out.println("Invalid syntax");
-        } catch (NumberFormatException nfe) {
+        }
+        catch (NumberFormatException nfe)
+        {
             System.out.println("One or more operands is not a number");
         }
+
+
     }
 }
